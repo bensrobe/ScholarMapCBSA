@@ -1,0 +1,260 @@
+
+
+/***TOP CONTROLS***/
+#similarity-types {
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+#node-search {
+  width: 80%;
+  margin: 0px auto;
+  display: block;
+}
+
+.top-controls .form-group {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.top-controls .center {
+  text-align: center;
+}
+
+.form-group.search {
+  border-left: 1px solid #ccc;
+}
+
+.form-group.map-type {
+  border-right: 1px solid #ccc;
+}
+
+
+/***SIDEBAR***/
+#right-sidebar {
+  background-color: #fff;
+  margin-top: 50px;
+  font-size: .9em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.ReferencesMap, .CharacteristicsMap {
+  display: none;
+}
+
+#right-sidebar .attribute_holder div {
+  border-bottom: 1px solid #ededed;
+  margin: 0 10px 0;
+}
+
+.node-attribute {
+    display: inline-block;
+    padding: 3px 6px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+    border-radius: 2px;
+    color: #fff;
+    background-color: #333;
+    text-decoration: none;
+}
+
+.node-attribute:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #ededed;
+}
+
+.node-attribute.collapsed {
+  display: none;
+}
+
+.node-attribute.collapsed.not-hidden {
+  display: inline-block;
+}
+
+.attribute_holder div {
+  min-height: 80px;
+}
+
+.attribute_holder .name_holder {
+  min-height: 0;
+}
+
+.attribute_holder .name_holder h4 {
+  padding-bottom: 1em;
+}
+
+.attribute_holder .name_holder span {
+  font-weight: normal;
+  font-size: .7em;
+  padding: 1em 0 0 0;
+  display: inline-block;;
+}
+
+.attribute_holder .name .node-attribute, .attribute_holder .authors .node-attribute {
+  background-color: #2ca02c;
+}
+
+.attribute_holder .citation .node-attribute {
+  background-color: #ffffff;
+  color: #333;
+}
+
+.attribute_holder .department .node-attribute {
+  background-color: #1f77b4;
+}
+
+.attribute_holder .fields .node-attribute {
+  background-color: #aec7e8;
+}
+
+.attribute_holder .methods .node-attribute {
+  background-color: #ff7f0e;
+}
+
+.attribute_holder .venues .node-attribute {
+  background-color: #ffbb78;
+}
+
+.attribute_holder .theories .node-attribute {
+  background-color: #d62728;
+}
+
+.attribute_holder .year .node-attribute {
+  background-color: #9467bd;
+}
+
+.attribute_holder .people .node-attribute {
+  background-color: #17becf;
+}
+
+.attribute_holder .references .node-attribute {
+  background-color: #e377c2;
+}
+
+.attribute_holder .expand {
+  background-color: #333 !important;
+}
+
+
+/***VIZ***/
+
+#visualization {
+  margin-top: -20px;
+}
+
+#viz-loading {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: #f3f3f3;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.node {
+  font: 300 9px Tahoma;
+}
+
+.link {
+  stroke: #999;
+  stroke-opacity: .4;
+  fill: none;
+  pointer-events: none;
+}
+
+.node:hover,
+.node--source,
+.node--target {
+  font-weight: 700;
+}
+
+.link--source,
+.link--target {
+  stroke-opacity: 1;
+  stroke-width: 1px;
+}
+
+.link--source {
+  stroke: #111;
+}
+
+.link--target {
+  stroke: #111;
+}
+
+
+
+
+.loading {
+    display: block;
+    margin: 0 auto;
+    top: 45%;
+    font-size: 45px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    -webkit-transform: translateZ(360deg);
+    -ms-transform: translateZ(360deg);
+    transform: translateZ(360deg);
+    -webkit-animation: loading 1.7s infinite ease;
+    animation: loading 1.7s infinite ease;
+}
+
+@-webkit-keyframes loading {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        box-shadow: 0 -0.83em 0 -0.4em #C1C1C1, 0 -0.83em 0 -0.42em #C1C1C1, 0 -0.83em 0 -0.44em #C1C1C1, 0 -0.83em 0 -0.46em #C1C1C1, 0 -0.83em 0 -0.477em #C1C1C1;
+    }
+    5%,
+    95% {
+        box-shadow: 0 -0.83em 0 -0.4em #C1C1C1, 0 -0.83em 0 -0.42em #C1C1C1, 0 -0.83em 0 -0.44em #C1C1C1, 0 -0.83em 0 -0.46em #C1C1C1, 0 -0.83em 0 -0.477em #C1C1C1;
+    }
+    10%,
+    59% {
+        box-shadow: 0 -0.83em 0 -0.4em #C1C1C1, -0.087em -0.825em 0 -0.42em #C1C1C1, -0.173em -0.812em 0 -0.44em #C1C1C1, -0.256em -0.789em 0 -0.46em #C1C1C1, -0.297em -0.775em 0 -0.477em #C1C1C1;
+    }
+    20% {
+        box-shadow: 0 -0.83em 0 -0.4em #C1C1C1, -0.338em -0.758em 0 -0.42em #C1C1C1, -0.555em -0.617em 0 -0.44em #C1C1C1, -0.671em -0.488em 0 -0.46em #C1C1C1, -0.749em -0.34em 0 -0.477em #C1C1C1;
+    }
+    38% {
+        box-shadow: 0 -0.83em 0 -0.4em #C1C1C1, -0.377em -0.74em 0 -0.42em #C1C1C1, -0.645em -0.522em 0 -0.44em #C1C1C1, -0.775em -0.297em 0 -0.46em #C1C1C1, -0.82em -0.09em 0 -0.477em #C1C1C1;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        box-shadow: 0 -0.83em 0 -0.4em #C1C1C1, 0 -0.83em 0 -0.42em #C1C1C1, 0 -0.83em 0 -0.44em #C1C1C1, 0 -0.83em 0 -0.46em #C1C1C1, 0 -0.83em 0 -0.477em #C1C1C1;
+    }
+}
+@keyframes loading {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        box-shadow: 0 -0.83em 0 -0.4em #C1C1C1, 0 -0.83em 0 -0.42em #C1C1C1, 0 -0.83em 0 -0.44em #C1C1C1, 0 -0.83em 0 -0.46em #C1C1C1, 0 -0.83em 0 -0.477em #C1C1C1;
+    }
+    5%,
+    95% {
+        box-shadow: 0 -0.83em 0 -0.4em #C1C1C1, 0 -0.83em 0 -0.42em #C1C1C1, 0 -0.83em 0 -0.44em #C1C1C1, 0 -0.83em 0 -0.46em #C1C1C1, 0 -0.83em 0 -0.477em #C1C1C1;
+    }
+    10%,
+    59% {
+        box-shadow: 0 -0.83em 0 -0.4em #C1C1C1, -0.087em -0.825em 0 -0.42em #C1C1C1, -0.173em -0.812em 0 -0.44em #C1C1C1, -0.256em -0.789em 0 -0.46em #C1C1C1, -0.297em -0.775em 0 -0.477em #C1C1C1;
+    }
+    20% {
+        box-shadow: 0 -0.83em 0 -0.4em #C1C1C1, -0.338em -0.758em 0 -0.42em #C1C1C1, -0.555em -0.617em 0 -0.44em #C1C1C1, -0.671em -0.488em 0 -0.46em #C1C1C1, -0.749em -0.34em 0 -0.477em #C1C1C1;
+    }
+    38% {
+        box-shadow: 0 -0.83em 0 -0.4em #C1C1C1, -0.377em -0.74em 0 -0.42em #C1C1C1, -0.645em -0.522em 0 -0.44em #C1C1C1, -0.775em -0.297em 0 -0.46em #C1C1C1, -0.82em -0.09em 0 -0.477em #C1C1C1;
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        box-shadow: 0 -0.83em 0 -0.4em #C1C1C1, 0 -0.83em 0 -0.42em #C1C1C1, 0 -0.83em 0 -0.44em #C1C1C1, 0 -0.83em 0 -0.46em #C1C1C1, 0 -0.83em 0 -0.477em #C1C1C1;
+    }
+}
