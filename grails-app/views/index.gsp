@@ -44,7 +44,7 @@
                         </div>
 
                         <div class="form-group col-xs-4 search">
-                            <input id="node-search" type="text" class="form-control" placeholder="Search">
+                            <input id="node-search" type="text" class="form-control" placeholder="Search connections...">
                         </div>
 
                     </div>

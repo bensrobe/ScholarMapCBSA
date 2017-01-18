@@ -167,6 +167,25 @@
                             </div>
                         </div>
 
+                        <div class="form-group">
+                            <div class="col-sm-3">
+                                <label for="url">Website</label>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <g:textField type="text" class="form-control" name="url" placeholder="Not set"
+                                             value="${user.url}"/>
+                            </div>
+
+                            <div class="col-sm-3">
+                                %{--<p>Disable/Enable</p>--}%
+                                <label class="switch switch-success">
+                                    <input type="checkbox" id="isSchoolOrDepartmentLocked"
+                                           class="lock" ${lockConf.isUrlLocked ? 'checked="checked"' : ''}/><i></i>
+                                </label>
+                            </div>
+                        </div>
+
                         <button type="submit"
                                 class="btn btn-default btn-block btn-lg"
                                 data-ng-disabled="!canSubmit()">Update</button>

@@ -1,6 +1,7 @@
 <%@ page import="csst15.ReferenceVote; com.google.common.base.Joiner; org.apache.commons.lang.ArrayUtils; csst15.ReferenceAuthor" %>
 <g:applyLayout name="main">
-    <div class="row">
+    <%--
+        <div class="row">
         <div class="col-md-1"></div>
 
         <div class="col-md-10">
@@ -30,6 +31,7 @@
 
         <div class="col-md-1"></div>
     </div>
+    --%>
 
     <div class="row">
         <div class="col-md-1"></div>

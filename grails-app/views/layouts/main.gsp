@@ -7,7 +7,7 @@
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"><!--<![endif]-->
 <head>
     <title>Welcome to Scholarmap</title>
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet"/>
+    <%--<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet"/>--%>
     <link rel="shortcut icon" href="${resource(dir: 'images', file: 'favicon.ico')}">
     <asset:stylesheet src="application.css"/>
     <asset:javascript src="application.js"/>
@@ -17,15 +17,23 @@
 
 <body>
 
-<header class="header navbar navbar-default navbar-fixed-top">
+<header class="header navbar navbar-default navbar-static-top">
     <div class="container">
+        <div class="row">
+            <div id="masthead-logo"> <asset:image id="msulogo" src="images/masthead-helmet-white.png" alt="MSU masthead logo" /> </div>
+            <div id="search-tool-box">
+                <form action="https://search.msu.edu/index.php" method="get">
+                    <input accesskey="4" id="q" name="q" placeholder="Search MSU.edu..." />
+                    <input id="btn_search" type="submit" value="" /> </form>
+            </div>
+        </div>
         <div class="row">
             <div class="navbar-header">
                 <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1"
                         class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span
                         class="icon-bar"></span></button>
                 <section class="logo text-center">
-                    <g:link controller="home" class="navbar-brand">ScholarMap</g:link>
+                    <g:link uri="/assets/index.html" class="navbar-brand"><strong>CENTER FOR BUSINESS AND SOCIAL ANALYTICS</strong></g:link>
                 </section>
             </div>
 
@@ -38,7 +46,6 @@
                         <li><g:link controller="admin" action="board">Board</g:link></li>
                     </sec:ifAllGranted>
                     <sec:ifNotGranted roles="${Roles.ADMIN.name}">
-                        <li><g:link uri="/assets/index.html">Back to CBSA</g:link></li>
                         <li><g:link controller="home" action="index">Map</g:link></li>
                         <li><g:link controller="home" action="list">People</g:link></li>
                         <li class="dropdown text-normal nav-profile">
@@ -97,7 +104,7 @@
     </div>
 </header>
 
-<div class="content" style="margin-top: 100px">
+<div class="content" style="margin-top: 40px">
     <g:layoutBody/>
     <g:render template="/utils/hiddenLinks"/>
 
@@ -106,7 +113,33 @@
 </div>
 
 
-<footer class="footer text-center" style="color: beige">&copy; Copyright 2015 ScholarMap</footer>
+<footer>
+    <div class="MSUwrapper dark-background" id="MSUstandardFooter" role="contentinfo">
+        <div class="fourMSUcolumns" id="standard-footer-MSU-wordmark">
+            <a href="http://www.msu.edu"> <asset:image alt="Michigan State University Wordmark" class="screen-msuwordmark" src="images/msu-wordmark-white-221x47.png" height="47" width="221" /> </a>
+        </div>
+        <div class="twelveMSUcolumns">
+            <div id="standard-footer-site-links">
+                <ul>
+                    <li>Call us: <strong>(517) 355-7505</strong>
+                    <li><a href="https://msu.edu/contactus.html">Contact Information</a>
+                    <li><a href="https://msu.edu/accessibility.html">Site Accessibility</a> </ul>
+            </div>
+            <div id="standard-footer-MSU-info">
+                <ul>
+                    <li>Call MSU: <span class="msu-phone"><strong>(517) 355-1855</strong></span></li>
+                    <li>Visit: <strong><a href="http://msu.edu">msu.edu</a></strong></li>
+                    <li>MSU is an affirmative-action, equal-opportunity employer.</li>
+                    <li><a href="http://oie.msu.edu/"><strong>Notice of Nondiscrimination</strong></a></li>
+                </ul>
+                <ul>
+                    <li class="spartans-will">Spartans Will.</li>
+                    <li>@ Michigan State University</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
 
